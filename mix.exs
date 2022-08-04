@@ -32,16 +32,21 @@ defmodule Denom.MixProject do
     [
       # Dependencies for all targets
       {:nerves, "~> 1.7.15", runtime: false},
+      {:nerves_uevent, "~> 0.1"},
       {:shoehorn, "~> 0.8.0"},
       {:ring_logger, "~> 0.8.3"},
       {:toolshed, "~> 0.2.13"},
       {:opex62541, github: "valiot/opex62541"},
       {:yggdrasil, github: "valiot/yggdrasil"},
       {:modbux, "~> 0.3.8"},
+      {:circuits_uart, "~> 1.3"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.6", targets: @all_targets},
       {:nerves_pack, "~> 0.6.0", targets: @all_targets},
+      {:uboot_env, "~> 1.0", targets: @all_targets},
+      {:nerves_logging, "~> 0.2", targets: @all_targets},
+      {:ramoops_logger, "~> 0.3.0", targets: @all_targets},
 
       # Dependencies for specific targets
       # NOTE: It's generally low risk and recommended to follow minor version

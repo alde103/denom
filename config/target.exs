@@ -56,9 +56,29 @@ config :vintage_net,
     {"eth0",
      %{
        type: VintageNetEthernet,
-       ipv4: %{method: :dhcp}
+       ipv4: %{
+        method: :static,
+        address: "192.168.103.10",
+        prefix_length: 24,
+        gateway: "192.168.103.1",
+        name_servers: ["1.1.1.1"]
+      }
      }},
-    {"wlan0", %{type: VintageNetWiFi}}
+     {"wlan0",
+     %{
+       type: VintageNetWiFi,
+       vintage_net_wifi: %{
+         networks: [
+           %{
+             key_mgmt: :wpa_psk,
+             ssid: "IZZI-56DF-5G",
+             psk: "dGAT7FuR",
+           }
+         ]
+       },
+       ipv4: %{method: :dhcp},
+     }
+   }
   ]
 
 config :mdns_lite,
