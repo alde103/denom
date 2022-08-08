@@ -13,6 +13,13 @@ defmodule Denom.Application do
 
     children =
       [
+        # Modbus TCP Clients
+
+        # OPC UA Server
+
+        # UART
+        {Denom.Uart.Supervisor, []},
+
         # Children for all targets
         # Starts a worker by calling: Denom.Worker.start_link(arg)
         # {Denom.Worker, arg},

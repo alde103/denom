@@ -117,3 +117,5 @@ config :mdns_lite,
 # Uncomment to use target specific configurations
 
 # import_config "#{Mix.target()}.exs"
+
+config :logger, backends: [RingLogger, RamoopsLogger]
