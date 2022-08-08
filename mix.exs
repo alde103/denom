@@ -37,7 +37,7 @@ defmodule Denom.MixProject do
       {:ring_logger, "~> 0.8.3"},
       {:toolshed, "~> 0.2.13"},
       {:opex62541, github: "valiot/opex62541"},
-      {:yggdrasil, github: "valiot/yggdrasil"},
+      {:jason, "~> 1.3"},
       {:modbux, "~> 0.3.8"},
       {:circuits_uart, "~> 1.3"},
 

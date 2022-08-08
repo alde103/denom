@@ -24,7 +24,10 @@ config :nerves, source_date_epoch: "1657511081"
 # See https://hexdocs.pm/ring_logger/readme.html for more information on
 # configuring ring_logger.
 
-config :logger, backends: [RingLogger]
+config :logger,
+  handle_otp_reports: true,
+  handle_sasl_reports: true,
+  backends: [RingLogger]
 
 if Mix.target() == :host or Mix.target() == :"" do
   import_config "host.exs"

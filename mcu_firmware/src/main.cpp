@@ -21,7 +21,7 @@ void loop() {
   
   String json = "{\"OPC_UA\":" + String(sim_sine_sensor) +", \"MODBUS_TCP\":" + String(sim_random_noise_sensor) + "}\r\n";
 
-  Serial.println(json);
+  Serial.print(json);
 
   delay(Fs);
 
