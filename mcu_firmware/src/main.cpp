@@ -14,7 +14,7 @@ void loop() {
   // Mocking a sensor with the sin() function.
   double Fs = 1000;
   double T = 1 / Fs;
-  double sim_sine_sensor = 10*sin(2*PI*50*time*T);
+  double sim_sine_sensor = 10*sin(2*PI*50*time*T) + 10;
 
   // Mocking a sensor as a randome noise response.
   double sim_random_noise_sensor = random(-5, 5);

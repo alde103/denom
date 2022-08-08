@@ -4,7 +4,7 @@ defmodule Denom.Uart.Supervisor do
   import Denom.Helper, only: [supervisor_child_spec: 2, worker_child_spec: 2]
   alias Denom.Uart
 
-  def start_link(_) do
+  def start_link() do
     Supervisor.start_link(__MODULE__, [], name: __MODULE__)
   end
 

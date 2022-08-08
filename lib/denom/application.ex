@@ -4,6 +4,7 @@ defmodule Denom.Application do
   @moduledoc false
 
   use Application
+  import Denom.Helper, only: [supervisor_child_spec: 2, worker_child_spec: 2]
 
   @impl true
   def start(_type, _args) do
@@ -16,9 +17,10 @@ defmodule Denom.Application do
         # Modbus TCP Clients
 
         # OPC UA Server
+        worker_child_spec(Denom.OPCUA.Server, []),
 
         # UART
-        {Denom.Uart.Supervisor, []},
+        supervisor_child_spec(Denom.Uart.Supervisor, []),
 
         # Children for all targets
         # Starts a worker by calling: Denom.Worker.start_link(arg)
