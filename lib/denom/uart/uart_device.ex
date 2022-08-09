@@ -3,7 +3,7 @@ defmodule Denom.Uart.Device do
   use GenServer, restart: :transient
   require Logger
 
-  alias Denom.{Uart.Device, OPCUA}
+  alias Denom.{Uart.Device, OPCUA, ModbusTCP}
   alias Circuits.UART
 
   defstruct uart_opts: nil,
@@ -62,7 +62,9 @@ defmodule Denom.Uart.Device do
 
     with  {:ok, json_map} <- Jason.decode(message),
           {:ok, new_flux_energy} <- Map.fetch(json_map, "OPC_UA"),
-          :ok <- OPCUA.Server.update_flux_energy(new_flux_energy) do
+          {:ok, new_stored_power} <- Map.fetch(json_map, "MODBUS_TCP"),
+          :ok <- OPCUA.Server.update_flux_energy(new_flux_energy),
+          :ok <- ModbusTCP.Server.update_stored_power(new_stored_power) do
       Logger.info("(#{__MODULE__}) Received (#{device}): #{inspect(json_map)}")
     else
       error ->

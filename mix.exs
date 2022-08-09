@@ -40,6 +40,7 @@ defmodule Denom.MixProject do
       {:jason, "~> 1.3"},
       {:modbux, "~> 0.3.8"},
       {:circuits_uart, "~> 1.3"},
+      {:coder, github: "valiot/coder"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.6", targets: @all_targets},

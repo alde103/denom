@@ -17,7 +17,7 @@ void loop() {
   double sim_sine_sensor = 10*sin(2*PI*50*time*T) + 10;
 
   // Mocking a sensor as a randome noise response.
-  double sim_random_noise_sensor = random(-5, 5);
+  double sim_random_noise_sensor = ((double) random(121))/100;
   
   String json = "{\"OPC_UA\":" + String(sim_sine_sensor) +", \"MODBUS_TCP\":" + String(sim_random_noise_sensor) + "}\r\n";
 

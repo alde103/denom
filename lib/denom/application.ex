@@ -15,6 +15,7 @@ defmodule Denom.Application do
     children =
       [
         # Modbus TCP Clients
+        worker_child_spec(Denom.ModbusTCP.Server, []),
 
         # OPC UA Server
         worker_child_spec(Denom.OPCUA.Server, []),

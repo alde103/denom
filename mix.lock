@@ -3,6 +3,7 @@
   "castore": {:hex, :castore, "0.1.17", "ba672681de4e51ed8ec1f74ed624d104c0db72742ea1a5e74edbc770c815182f", [:mix], [], "hexpm", "d9844227ed52d26e7519224525cb6868650c272d4a3d327ce3ca5570c12163f9"},
   "circuits_uart": {:hex, :circuits_uart, "1.4.4", "13f422c5f795bda3896e16c08f5307d02a05213f7066910a9f012268ba31a8f2", [:mix], [{:elixir_make, "~> 0.6", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm", "fd2b3433137760345186b2b5d55e7181f8e610fad1b58b36d3e25f806cbb0535"},
   "circular_buffer": {:hex, :circular_buffer, "0.4.1", "477f370fd8cfe1787b0a1bade6208bbd274b34f1610e41f1180ba756a7679839", [:mix], [], "hexpm", "633ef2e059dde0d7b89bbab13b1da9d04c6685e80e68fbdf41282d4fae746b72"},
+  "coder": {:git, "https://github.com/valiot/coder.git", "d53d5f3c16ddc1a0260877e752748c28989ed038", []},
   "elixir_cmake": {:git, "https://github.com/valiot/elixir-cmake.git", "a66b4b51f3f89ec96ce5de133c4af9361ada6ae0", [branch: "multi-projects"]},
   "elixir_make": {:hex, :elixir_make, "0.6.3", "bc07d53221216838d79e03a8019d0839786703129599e9619f4ab74c8c096eac", [:mix], [], "hexpm", "f5cbd651c5678bcaabdbb7857658ee106b12509cd976c2c2fca99688e1daf716"},
   "exreg": {:hex, :exreg, "1.0.0", "f2dece7039ea50a735179046d103cb9846fdd519d068eabff804bf36949917dd", [:mix], [], "hexpm", "e3c2c09d33fbc2392678e5a0fe343fc65309c4747eb753a0c30c13e2e592a90c"},
