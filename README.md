@@ -1,6 +1,12 @@
 # Denom
 
-**TODO: Add description**
+Demonstration of Elixir/Nerves with OPC-UA (opex62541) and Modbus TCP (modbux).
+
+## Setup
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/alde103/denom/main/assets/images/setup.png" alt="Snapex7 Logo" width="512" height="302" />
+</div>
 
 ## Targets
 
